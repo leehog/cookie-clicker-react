@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f3efee;
 }
 .cookie-icon {
   max-width: 200px;
@@ -19,7 +20,7 @@
   width: 100%;
   display: flex;
   align-content: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px;
   background-color: salmon;
 }
@@ -34,4 +35,7 @@
   padding: 5px;
   color: white;
   border-radius: 30px;
+}
+.collection .collection-item {
+  line-height: 3.5rem;
 }
