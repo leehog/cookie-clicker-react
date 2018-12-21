@@ -6,7 +6,6 @@ const INITIAL_STATE = {
 }
 
 export default function(state = INITIAL_STATE, action) {
-    console.log(state.cookies)
     switch(action.type){
         case ADD_COOKIE: {
             return {
