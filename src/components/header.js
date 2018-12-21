@@ -32,7 +32,11 @@ class Header extends Component {
   render() {
     return (
       <div className="header">  
-        <p className="cookie-count">Total cookies: {this.state.cookies}</p>
+        <p className="cookie-count header-title">Total cookies: {this.state.cookies}</p>
+        <div className="header-bonus">
+          <p className="header-title">Current boost: {this.props.boost > 1 ? this.props.boost + ' cookies/click' : 'No boost yet'} </p>
+          <p className="header-title">Current factory: {this.props.factory ? this.props.factory + ' cookies/second' : 'No factory yet'}</p>
+        </div>
       </div>
     )
   }
@@ -49,9 +53,11 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
     const { cookies } = state.cookies
     const { factory } = state.factory
+    const { boost } = state.boost
     return {
       cookies,
-      factory
+      factory,
+      boost
     }
 }
 
